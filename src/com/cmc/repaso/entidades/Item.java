@@ -1,62 +1,56 @@
 package com.cmc.repaso.entidades;
 
 public class Item {
+
 	private String nombre;
 	private int productosActuales;
 	private int productosDevueltos;
 	private int productosVendidos;
 
-	
-	
-	
+	// Getters
 	public String getNombre() {
 		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
 	}
 
 	public int getProductosActuales() {
 		return productosActuales;
 	}
 
-	public void setProductosActuales(int productosActuales) {
-		this.productosActuales = productosActuales;
-	}
-
 	public int getProductosDevueltos() {
 		return productosDevueltos;
-	}
-
-	public void setProductosDevueltos(int productosDevueltos) {
-		this.productosDevueltos = productosDevueltos;
 	}
 
 	public int getProductosVendidos() {
 		return productosVendidos;
 	}
 
-	public void setProductosVendidos(int productosVendidos) {
-		this.productosVendidos = productosVendidos;
+	// Setters
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
+	public void setProductosActuales(int productosActuales) {
+		this.productosActuales = productosActuales;
+	}
+
+	// Método para imprimir el estado del inventario
 	public void imprimir() {
-		// System.out.println("Nombre: " + this.nombre);
 		System.out.println("Productos Actuales: " + this.productosActuales);
 		System.out.println("Productos Devueltos: " + this.productosDevueltos);
 		System.out.println("Productos Vendidos: " + this.productosVendidos);
 	}
 
+	// Método para vender productos
 	public void vender(int cantidad) {
-		this.productosActuales = this.productosActuales - cantidad;
-		this.productosVendidos = this.productosVendidos + cantidad;
+		this.productosActuales -= cantidad;
+		this.productosVendidos += cantidad;
 	}
 
+	// Método para registrar devoluciones
 	public void devolver(int cantidadDevueltos) {
-		this.productosActuales = this.productosActuales + cantidadDevueltos;
-		this.productosVendidos = this.productosVendidos - cantidadDevueltos;
-		this.productosDevueltos = this.productosDevueltos + cantidadDevueltos;
+		this.productosActuales += cantidadDevueltos;
+		this.productosVendidos -= cantidadDevueltos;
+		this.productosDevueltos += cantidadDevueltos;
 	}
 
 }
