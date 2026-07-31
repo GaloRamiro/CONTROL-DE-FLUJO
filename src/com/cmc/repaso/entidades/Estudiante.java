@@ -22,4 +22,16 @@ public class Estudiante {
 		}
 	}
 
+	public String getNombre() {
+	    return nombre;
+	}
+
+	public double getNota() {
+	    return nota;
+	}
+
+	public String getResultado() {
+	    return resultado;
+	}
+
 }
