@@ -15,17 +15,20 @@ public class Producto {
 		return nombre;
 	}
 
-	
-	public void setPrecio(double precio) {
-	    if (precio < 0) {
-	        this.precio = precio * -1;
-	    } else {
-	        this.precio = precio;
-	    }
+	public double getPrecio() {
+		return precio;
 	}
-	
+
+	public void setPrecio(double precio) {
+		if (precio < 0) {
+			this.precio = precio * -1;
+		} else {
+			this.precio = precio;
+		}
+	}
+
 	public double calcularPrecioPromo(double porcentaje) {
-	    double descuento = precio * porcentaje / 100;
-	    return precio - descuento;
+		double descuento = precio * porcentaje / 100;
+		return precio - descuento;
 	}
 }
