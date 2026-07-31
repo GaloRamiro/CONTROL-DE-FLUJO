@@ -9,8 +9,7 @@ public class TestItem {
 		System.out.println("==================== EJERCICIO 4 ====================");
 		i1.setNombre("Iphon 13 pro max");
 		i1.setProductosActuales(20);
-		i1.setProductosDevueltos(0);
-		i1.setProductosVendidos(0);
+
 
 		System.out.println("=== Estado inicial ===");
 		i1.imprimir();
